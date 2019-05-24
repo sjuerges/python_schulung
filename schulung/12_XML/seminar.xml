@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<SEMINARPLAN xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:noNamespaceSchemaLocation="07_seminar_mit_attr.xsd">
+    <SEMINAR>
+        <SEMINARTHEMA>XML</SEMINARTHEMA>
+        <SEMINARORT>Berlin</SEMINARORT>
+        <SEMINARLEITER anrede="Herr">
+            <VORNAME>Kay</VORNAME>
+            <NACHNAME>Stromberg</NACHNAME>
+        </SEMINARLEITER>
+        <TEILNEHMER anrede="Herr">
+            <VORNAME>Rolf</VORNAME>
+            <NACHNAME>Rabicht</NACHNAME>
+        </TEILNEHMER>
+        <TEILNEHMER anrede="Frau">
+            <VORNAME>Sigrun</VORNAME>
+            <NACHNAME>Sieghaar</NACHNAME>
+        </TEILNEHMER>
+        <ABLAUF>
+            <TAG>
+                <DATUM>2006-01-16</DATUM>
+                <BLOCK>
+                    <BEGIN>09:00:00</BEGIN>
+                    <ENDE>11:30:00</ENDE>
+                    <THEMA>Einführung</THEMA>
+                    <THEMA>Installation</THEMA>
+                </BLOCK>
+                <BLOCK>
+                    <BEGIN>11:45:00</BEGIN>
+                    <ENDE>12:30:00</ENDE>
+                    <THEMA>Elemente und Attribute</THEMA>
+                    <THEMA>Übung</THEMA>
+                </BLOCK>
+            </TAG>
+            <TAG>
+                <DATUM>2006-01-17</DATUM>
+                <BLOCK>
+                    <BEGIN>09:00:00</BEGIN>
+                    <ENDE>11:30:00</ENDE>
+                    <THEMA>CSS</THEMA>
+                </BLOCK>
+                <BLOCK>
+                    <BEGIN>11:45:00</BEGIN>
+                    <ENDE>12:30:00</ENDE>
+                    <THEMA>XSL</THEMA>
+                    <THEMA>Übung</THEMA>
+                </BLOCK>
+            </TAG>
+        </ABLAUF>
+    </SEMINAR>
+</SEMINARPLAN>

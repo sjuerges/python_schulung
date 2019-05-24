@@ -1,0 +1,11 @@
+<config>
+    <mysql id="1">
+        <host>localhost</host>
+        <user>root</user>
+        <passwd>root</passwd>
+        <db>scott_innodb</db>
+        <standby>
+            <db>scott</db>
+        </standby>
+    </mysql>
+</config>

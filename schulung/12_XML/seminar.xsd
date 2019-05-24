@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
+           attributeFormDefault="unqualified">
+    <xs:element name="SEMINARPLAN">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="SEMINAR" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="SEMINARTHEMA" type="xs:string"/>
+                            <xs:element name="SEMINARORT" type="xs:string"/>
+                            <xs:element name="SEMINARLEITER" type="persontype" minOccurs="0" maxOccurs="2"/>
+                            <xs:element name="TEILNEHMER" type="persontype" minOccurs="0" maxOccurs="unbounded"/>
+                            <xs:element name="ABLAUF">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="TAG" type="tagType" maxOccurs="unbounded"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <!-- persontype für SEMINARLEITER, TEILNEHMER-->
+    <xs:complexType name="persontype">
+        <xs:sequence>
+            <xs:element name="VORNAME" type="xs:string"/>
+            <xs:element name="NACHNAME" type="xs:string"/>
+        </xs:sequence>
+        <xs:attribute name="anrede">
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:enumeration value="Herr"/>
+                    <xs:enumeration value="Frau"/>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+    </xs:complexType>
+    <!-- tagtype für TAG-->
+    <xs:complexType name="tagType">
+        <xs:sequence>
+            <xs:element name="DATUM" type="xs:date"/>
+            <xs:element name="BLOCK" maxOccurs="unbounded">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="BEGIN" type="xs:time"/>
+                        <xs:element name="ENDE" type="xs:time"/>
+                        <xs:element name="THEMA" type="xs:string" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

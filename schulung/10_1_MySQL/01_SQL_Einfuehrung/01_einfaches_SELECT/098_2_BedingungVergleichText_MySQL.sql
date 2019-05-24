@@ -1,0 +1,28 @@
+SELECT * 
+FROM t_ma 
+WHERE ort = 'HAMBURG'
+LIMIT 1;
+
+SELECT * 
+FROM t_ma 
+WHERE BINARY ort = 'HAMBURG'
+LIMIT 1;
+
+SHOW CREATE TABLE t_ma;
+ALTER TABLE t_ma
+CHANGE COLUMN ort ort VARCHAR(50) COLLATE 'latin1_general_cs';
+
+SELECT * 
+FROM t_ma 
+WHERE ort = 'HAMBURG'
+LIMIT 1;
+
+SELECT * 
+FROM t_ma 
+WHERE UPPER(ort) = 'HAMBURG'
+LIMIT 1;
+
+SHOW CREATE TABLE t_ma;
+ALTER TABLE t_ma
+CHANGE COLUMN ort ort VARCHAR(50) COLLATE 'latin1_general_ci';
+
